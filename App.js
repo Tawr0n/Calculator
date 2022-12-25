@@ -1,20 +1,31 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {StatusBar} from 'expo-status-bar';
+import {SafeAreaView, StyleSheet} from 'react-native';
+import Numpad from "./src/Numpad";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    return (
+        <SafeAreaView style={styles.container}>
+
+                <Numpad/>
+                <StatusBar style="auto"/>
+        </SafeAreaView>
+    );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    container: {
+        flex: 1,
+        backgroundColor: '#151414',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    buttons: {
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    btnRow: {
+        flexDirection: "row",
+        maxWidth: '100%'
+    }
+
 });
